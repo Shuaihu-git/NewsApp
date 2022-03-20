@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">招聘资讯信息推送</string>
+    <string name="serverurl">http://www.shuaihu.vip:80/news/NewsInfo.json</string>
+
+</resources>
