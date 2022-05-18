@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:hint="请输入密码"
                 android:textColorHint="@color/teal_200"
-                android:inputType="numberPassword"
+                android:inputType="textPassword"
                 android:padding="10dp"
                 android:background="@null"
                 android:layout_marginRight="10dp"

@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int SO_TIMEOUT = 10*1000;  //设置等待数据超时时间10秒钟
     private static final int LOGIN_OK = 1;
     boolean Success;
+    boolean Usernotnull;
+    boolean Passwdnotnull;
     NewsSQL newsSQL=new NewsSQL();
     Connection connection=null;
     @Override
@@ -56,41 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 connection=newsSQL.getCon();
                 Statement statement=null;
                 String SQL;
-
             }
         }).start();
     }
     @Override
     public void onClick(View v) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                connection=newsSQL.getCon();
-                Statement statement=null;
-                String SQL;
-                try {
-                    String user_name = username.getText().toString().trim();
-                    String passwd;
-                    passwd = userpasswd.getText().toString().trim();
-                    SQL="SELECT user_name,user_passwd from user where user_name ='"+user_name+"'";
-                    statement=connection.createStatement();
-                    ResultSet resultSet=statement.executeQuery(SQL);
-                    while (resultSet.next()){
-                        user_ID_s=resultSet.getString("user_name");
-                        user_Passwd_s=resultSet.getString("user_passwd");
-                    }
-                    if (user_name.equals(user_ID_s)&&passwd.equals(user_Passwd_s)) {
-                        Success=true;
-                    } else {
-                        Success=false;
-                    }
-                    Log.e("Success", String.valueOf(Success));
 
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-        }).start();
         if (v == zhuce) {
             Intent intent = new Intent(this, Zhuce.class);
             startActivity(intent);
@@ -101,12 +74,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             alertDialog.setNegativeButton("确认", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    String user_name = username.getText().toString().trim();
+                    String passwd;
+                    passwd = userpasswd.getText().toString().trim();
+                    String uu="";
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            connection=newsSQL.getCon();
+                            Statement statement=null;
+                            String SQL;
+                            try {
 
+                                SQL="SELECT user_name,user_passwd from user where user_name ='"+user_name+"'";
+                                statement=connection.createStatement();
+                                ResultSet resultSet=statement.executeQuery(SQL);
+                                while (resultSet.next()){
+                                    user_ID_s=resultSet.getString("user_name");
+                                    user_Passwd_s=resultSet.getString("user_passwd");
+                                    System.out.println(user_ID_s);
+                                    System.out.println(user_Passwd_s);
+                                }
+                            } catch (SQLException throwables) {
+                                throwables.printStackTrace();
+                            }
+                        }
+                    }).start();
+
+                    if(user_name.equals(uu)){
+                        Usernotnull=false;
+                        Toast.makeText(MainActivity.this, "用户名不能为空!", Toast.LENGTH_LONG).show();
+                    }else{
+                        Usernotnull=true;
+                    }
+                    if (passwd.equals(uu)){
+                        Passwdnotnull=false;
+                        Toast.makeText(MainActivity.this, "密码不能为空!", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        Passwdnotnull=true;
+                    }
+                    if (Usernotnull&&Passwdnotnull&&user_name.equals(user_ID_s)&&passwd.equals(user_Passwd_s)) {
+                        Success=true;
+
+                    } else {
+                        Success=false;
+                    }
                         if (Success){
                             Intent intent = new Intent(MainActivity.this,News.class);
                             startActivity(intent);
                             Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_LONG).show();
                             MainActivity.this.finish();
+
                         }
                         else{
                             Toast.makeText(MainActivity.this,"用户名或密码错误",Toast.LENGTH_LONG).show();
