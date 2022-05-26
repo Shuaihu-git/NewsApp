@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Statement statement=null;
                             String SQL;
                             try {
-
                                 SQL="SELECT user_name,user_passwd from user where user_name ='"+user_name+"'";
                                 statement=connection.createStatement();
                                 ResultSet resultSet=statement.executeQuery(SQL);

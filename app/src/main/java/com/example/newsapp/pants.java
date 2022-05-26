@@ -20,7 +20,7 @@ public class pants extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pants);
         try {
-            plantInfos = com.example.newsapp.Utils.getPlantInfos(getResources().getAssets().open("plant.xml"));
+            plantInfos = com.example.newsapp.XMLUtils.getPlantInfos(getResources().getAssets().open("plant.xml"));
         } catch (Exception e) {
             e.printStackTrace();
             	        }

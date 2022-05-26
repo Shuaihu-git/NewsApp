@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Utils {
+public class XMLUtils {
     public static List<com.example.newsapp.PlantInfo> getPlantInfos(InputStream is) throws Exception {
 
                 XmlPullParser parser = Xml.newPullParser();
