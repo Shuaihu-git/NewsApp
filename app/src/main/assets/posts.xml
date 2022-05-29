@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plants>
-    <plantsInfo>
+<posts>
+    <postsInfo>
         <name>Java后端开发、Java工程师</name>
         <content>
             【岗位要求】：
@@ -36,8 +36,8 @@
             应届生专项福利：实习期提供宿舍或住宿补贴、任一次报到路费、符合当地落户条件的优秀应届生协助办理落户。
 
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>后端开发实习生</name>
         <content>
             工作职责：
@@ -64,8 +64,8 @@
 
             7、具有良好的团队合作精神和与人沟通的能力。
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>Java开发工程师(应届-上海)</name>
         <content>
             【岗位职责】
@@ -88,8 +88,8 @@
 
             5、有Java后端相关项目开发经验优先。
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>C/C++工程师</name>
         <content>
             职位要求：
@@ -107,8 +107,8 @@
             工作地点：陆家嘴软件园（浦东新区峨山路91弄98号）
 
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>鸿蒙开发工程师（OD）</name>
         <content>
             【工作职责】
@@ -140,8 +140,8 @@
 
             上海浦东新区上海华为技术优先公司（新金桥路）2222
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>Linux运维工程师</name>
         <content>
             岗位职责：
@@ -168,8 +168,8 @@
 
             上海浦东新区半岛科技园10号楼3楼
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>C#软件开发工程师</name>
         <content>
             毕业时间:2022年
@@ -195,8 +195,8 @@
 
             职位招聘6-15人
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>Golang开发工程师（实习生）</name>
         <content>
             【岗位职责】
@@ -219,8 +219,8 @@
 
             上海静安区北壹中心1号楼7层
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>Linux驱动开发工程师</name>
         <content>
             【岗位职责】
@@ -242,8 +242,8 @@
 
             上海徐汇区漕宝路401号园区1号楼
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>PHP全栈开发工程师</name>
         <content>
             【岗位职责】
@@ -271,8 +271,8 @@
 
             上海黄浦区峻岭广场37
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>Android软件开发实习生</name>
         <content>
             【岗位要求】
@@ -325,8 +325,8 @@
             工作地址:上海市松江区上海交科松江科创园(泗泾地铁站班车接送)
 
         </content>
-    </plantsInfo>
-    <plantsInfo>
+    </postsInfo>
+    <postsInfo>
         <name>软件测试工程师（2022届校招）（上海）</name>
         <content>
             毕业时间:2022年
@@ -356,5 +356,5 @@
             上海徐汇区苏州科达技术股份有限公司2007号
 
         </content>
-    </plantsInfo>
-</plants>
+    </postsInfo>
+</posts>

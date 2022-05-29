@@ -52,14 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         user_ID_a=username.getText().toString().trim();//用户输入注册名称
         user_Passwd_a=userpasswd.getText().toString().trim();//用户输入密码
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                connection=newsSQL.getCon();
-                Statement statement=null;
-                String SQL;
-            }
-        }).start();
     }
     @Override
     public void onClick(View v) {

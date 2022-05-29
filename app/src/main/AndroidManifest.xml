@@ -11,10 +11,10 @@
         android:roundIcon="@drawable/c"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp" >
-        <activity android:name=".login"/>
+
         <activity android:name=".Zhuce" />
         <activity android:name=".News" />
-        <activity android:name=".pants" />
+        <activity android:name=".Posts" />
         <activity android:name=".MainActivity">
 
             <intent-filter>

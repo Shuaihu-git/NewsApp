@@ -32,7 +32,7 @@ public class News extends AppCompatActivity {
     private TextView content;
     private ImageView image;
     public  static int p=0;
-    private List<PlantInfo> plantInfos;
+    private List<PostsInfo> plantInfos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +58,7 @@ public class News extends AppCompatActivity {
                 String s="总行："+parent.getCount()+"/n Item的Name："+textView.getText().toString()+" 行号："+position+"id:"+id;
                 System.out.println(s);
                 p=position;
-                Intent intent=new Intent(News.this,pants.class);
+                Intent intent=new Intent(News.this, Posts.class);
                 startActivity(intent);
             }
         });
