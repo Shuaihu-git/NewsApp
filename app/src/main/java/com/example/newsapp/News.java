@@ -129,6 +129,12 @@ public class News extends AppCompatActivity {
                     tv_type.setTextColor(Color.GREEN);
                     tv_type.setText("日新："+newsInfo.getComment());
                     break;
+                case 5:
+                    tv_type.setTextColor(Color.RED);
+                    tv_type.setText("停止招聘");
+                    break;
+                default:
+                    break;
 
 
 
