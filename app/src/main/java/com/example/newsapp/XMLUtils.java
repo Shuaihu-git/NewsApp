@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XMLUtils {
-    public static List<PostsInfo> getPlantInfos(InputStream is) throws Exception {
+    public static List<PostsInfo> getPostsInfos(InputStream is) throws Exception {
 
                 XmlPullParser parser = Xml.newPullParser();
 

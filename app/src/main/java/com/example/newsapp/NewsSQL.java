@@ -20,6 +20,7 @@ public class NewsSQL {
     static final String Passwd="19991016zsh..";
 
 
+
     public static Connection getCon() {
         Connection conn = null;
         try {
@@ -36,4 +37,24 @@ public class NewsSQL {
         }
         return conn;
     }
+    public static boolean selectUsername(Connection connection,String user_name){
+        boolean flag=false;
+        try {
+            if (!(connection.isClosed())){
+                String SQL;
+                SQL="SELECT user_name,user_passwd from user where user_name ='"+user_name+"'";
+
+                flag=true;
+
+            }else {
+                flag=false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return flag ;
+    }
+
 }

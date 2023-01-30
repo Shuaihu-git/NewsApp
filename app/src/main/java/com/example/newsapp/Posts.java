@@ -20,7 +20,7 @@ public class Posts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts);
         try {
-            postsInfos = com.example.newsapp.XMLUtils.getPlantInfos(getResources().getAssets().open("posts.xml"));
+            postsInfos = com.example.newsapp.XMLUtils.getPostsInfos(getResources().getAssets().open("posts.xml"));
         } catch (Exception e) {
             e.printStackTrace();
         }

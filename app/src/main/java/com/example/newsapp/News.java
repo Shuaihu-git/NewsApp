@@ -32,7 +32,7 @@ public class News extends AppCompatActivity {
     private TextView content;
     private ImageView image;
     public  static int p=0;
-    private List<PostsInfo> plantInfos;
+    private List<PostsInfo> postsInfos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +46,9 @@ public class News extends AppCompatActivity {
         content = (TextView) findViewById(R.id.tv_content);
         image= (ImageView) findViewById(R.id.imgv);
 //        content.setText(
-//                "\u3000\u3000" + plantInfos.get(0).getPlantContent());
+//                "\u3000\u3000" + postsInfos.get(0).getPostsContent());
 //        image.setBackgroundResource(R.drawable.a);
         lvNews.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-
-
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
