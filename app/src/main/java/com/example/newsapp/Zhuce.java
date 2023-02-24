@@ -23,6 +23,11 @@ import java.sql.Statement;
 
 import javax.xml.transform.Result;
 
+/**
+ *用户注册类
+ *处理用户界面发送的内容并与数据库进行对比
+ * 返回用户注册成功与否
+ */
 public class Zhuce extends AppCompatActivity implements View.OnClickListener {
     private Button btn_fanhui;
     private Button btn_ok;
@@ -50,6 +55,9 @@ public class Zhuce extends AppCompatActivity implements View.OnClickListener {
         btn_ok.setOnClickListener(this);
         btn_fanhui.setOnClickListener(this);
     }
+    /*
+    用户点击处理类
+     */
     @Override
     public void onClick(View v) {
         if (v==btn_fanhui){

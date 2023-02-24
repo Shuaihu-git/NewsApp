@@ -133,10 +133,6 @@ public class News extends AppCompatActivity {
                     break;
                 default:
                     break;
-
-
-
-
             }
             return view;
         }
